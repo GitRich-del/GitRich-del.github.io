@@ -1,0 +1,1 @@
+# GitRich-del.github.io
