@@ -2,6 +2,6 @@
 
 **
 
-........SITE WILL BE UP SOON........
+........SITE ⭐ WILL ⭐ BE ⭐ UP ⭐ SOON........
 
 **
