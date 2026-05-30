@@ -130,10 +130,10 @@
 
             <div class="validation-badges">
                 <a href="#" id="validation_link_html">
-                    <img src="https://www.w3.org/QA/Tools/Ico3/valid-html5-blue" alt="Valid HTML5">
+                    <img src="https://www.w3.org/QA/Tools/Ico3/valid-html5-blue" alt="Valid HTML5" height="31" width="88">
                 </a>
                 <a href="#" id="validation_link_css">
-                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" height="31" width="88">
                 </a>
             </div>
         </footer>
@@ -141,12 +141,12 @@
     </div>
 
     <script>
+        // These scripts dynamically swap the "#" href for the live W3C validator link using your page's current URL
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/nu/?doc=" + encodeURIComponent(window.location.href));
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + encodeURIComponent(window.location.href));
     </script>
 </body>
 </html>
-
 
 
 
