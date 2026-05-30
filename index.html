@@ -85,13 +85,14 @@
             margin-top: 25px;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 15px;
         }
 
         .validation-badges img {
             border: none;
             height: 31px;
-            width: 88px;
+            width: auto; /* Changed to auto to preserve the aspect ratio of your badge */
             transition: transform 0.2s ease;
         }
 
@@ -130,7 +131,7 @@
 
             <div class="validation-badges">
                 <a href="#" id="validation_link_html">
-                    <img src="https://www.w3.org/QA/Tools/Ico3/valid-html5-blue" alt="Valid HTML5" height="31" width="88">
+                    <img src="images/HTML5_Badge_256.png" alt="Valid HTML5" height="31">
                 </a>
                 <a href="#" id="validation_link_css">
                     <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" height="31" width="88">
