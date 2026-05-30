@@ -1,0 +1,87 @@
+
+/* Centralized Course Layout Stylesheet */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+#page-wrapper {
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+}
+
+header, footer {
+    text-align: center;
+    border-bottom: 1px solid #006633;
+    padding: 15px 0;
+}
+
+footer {
+    border-bottom: none;
+    border-top: 1px solid #006633;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+nav {
+    margin: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #006633;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #006633;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 5px solid #006633;
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-style: italic;
+}
+
+.intro-image {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 4px;
+}
+
+.signature {
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
