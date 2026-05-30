@@ -1,2 +1,9 @@
 
 # GitRich-del.github.io
+
+
+
+
+
+
+
