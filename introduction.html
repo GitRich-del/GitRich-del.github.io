@@ -87,8 +87,9 @@
 
         .intro-image {
             display: block;
-            width: 350px;
-            max-width: 100%;
+            /* Using max-width combined with width: 100% strictly satisfies the linter rule */
+            max-width: 350px;
+            width: 100%;
             height: auto;
             margin: 30px auto;
             border-radius: 12px;
