@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard Siebenlist Jr | ITIS3135 | Introduction</title>
+
     <style>
-        /* --- Base Page Setup --- */
         body {
-            /* Matches index.html premium orange-to-yellow downward linear gradient blend exactly */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Updated to Courier font stack */
+            font-family: 'Courier New', Courier, monospace;
             background: linear-gradient(180deg, #ff7e5f 0%, #feb47b 50%, #ffde6a 100%);
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -17,7 +17,6 @@
             padding: 0;
         }
 
-        /* Translucent glassmorphism page wrapper container matching index.html */
         #page-wrapper {
             max-width: 950px;
             margin: 40px auto;
@@ -30,12 +29,14 @@
 
         header, footer {
             text-align: center;
-            border-bottom: 2px solid #d35400;
             padding: 20px 0;
         }
 
+        header {
+            border-bottom: 2px solid #d35400;
+        }
+
         footer {
-            border-bottom: none;
             border-top: 2px solid #d35400;
             margin-top: 50px;
             font-size: 0.95em;
@@ -43,40 +44,28 @@
 
         h1 {
             font-size: 2.6em;
-            letter-spacing: -1px;
             color: #d35400;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
             margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         h2 {
             font-size: 1.9em;
             color: #e67e22;
             border-bottom: 1px dashed #e67e22;
-            padding-bottom: 5px;
             display: inline-block;
-        }
-
-        /* Cool accent font style for introduction subheaders to elevate energy */
-        h3 {
-            font-family: 'Georgia', serif;
-            font-style: italic;
-            font-size: 1.4em;
-            color: #d35400;
-            margin-top: 5px;
+            padding-bottom: 5px;
         }
 
         nav {
             margin: 15px 0;
-            text-align: center;
         }
 
         nav a {
-            margin: 0 12px;
-            text-decoration: none;
             color: #d35400;
+            text-decoration: none;
             font-weight: bold;
-            transition: color 0.2s ease-in-out;
+            margin: 0 10px;
         }
 
         nav a:hover {
@@ -88,25 +77,34 @@
             max-width: 800px;
             margin: 30px auto;
             line-height: 1.7;
-            font-size: 1.15em;
+            font-size: 1.1em;
         }
 
-        /* Profile Image alignment constraints */
         .intro-image {
-            max-width: 380px;
-            width: 100%;
-            height: auto;
             display: block;
-            margin: 25px auto;
+            width: 350px;
+            max-width: 100%;
+            height: auto;
+            margin: 30px auto;
             border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            border: 3px solid #ffffff;
-            box-sizing: border-box; /* Added to fix validation error with width and border sizes */
+            border: 4px solid #ffffff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
         }
 
         ul {
-            padding-left: 10px;
-            list-style-type: none;
+            list-style: none;
+            padding-left: 0;
         }
 
         ul li {
@@ -119,66 +117,65 @@
             content: "•";
             color: #e67e22;
             font-weight: bold;
-            font-size: 1.2em;
             position: absolute;
             left: 0;
-            top: -2px;
         }
 
         ul ul {
-            list-style-type: circle;
             padding-left: 25px;
-            margin-top: 5px;
+            list-style: circle;
         }
-        
+
         ul ul li::before {
-            content: none;
+            content: "";
         }
     </style>
+
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div id="page-wrapper">
-        
-        <header>
-            <h1>Richard Siebenlist Jr's ITIS3135</h1>
-            <nav>
-                <a href="index.html">Home</a> |
-                <a href="introduction.html">Introduction</a> |
-                <a href="contract.html">Contract</a>
-            </nav>
-        </header>
+<div id="page-wrapper">
+    <header>
+        <h1>Richard Siebenlist Jr's ITIS3135</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="introduction.html">Introduction</a> |
+            <a href="contract.html">Contract</a>
+        </nav>
+    </header>
 
-        <main>
-            <h2>Introduction</h2>
-            
-            <img src="EC988502-F530-4440-A6B9-5981892C7913.PNG" alt="" class="intro-image">
+    <main>
+        <h2>Introduction</h2>
+        <figure>
+            <img src="EC988502-F530-4440-A6B9-5981892C7913.PNG" alt="Photo of Richard Siebenlist Jr" class="intro-image">
+            <figcaption>Me enjoying a night out.</figcaption>
+        </figure>
 
-            <ul>
-                <li><strong>Personal Background:</strong> Born X Raised in Milwaukee, Wisconsin 🧀, passionate about technology and problem-solving.</li>
-                <li><strong>Professional Background:</strong> Working on gaining experience throughout my academics and personal projects.</li>
-                <li><strong>Academic Background:</strong> Currently pursuing a degree in Comp. Sci B.S., interested in getting into the Cybersecurity 💻 Field.</li>
-                <li><strong>Background with Web Development:</strong> I'm just starting out in web development and eager to expand my skills.</li>
-                <li><strong>Primary Computer Platform:</strong> Windows 11 System</li>
-                <li><strong>Courses I'm Taking This Semester:</strong>
-                    <ul>
-                        <li>ITIS 3135 - Web App Design and Development</li>
-                        <li>ITSC 3155 - Software Engineering</li>
-                    </ul>
-                </li>
-                <li><strong>Interesting Fact:</strong> I've just got into watching F1. 💨</li>
-            </ul>
-        </main>
+        <ul>
+            <li><strong>Personal Background:</strong> Born and raised in Milwaukee, Wisconsin 🧀, passionate about technology and problem-solving.</li>
+            <li><strong>Professional Background:</strong> Working on gaining experience throughout my academics and personal projects.</li>
+            <li><strong>Academic Background:</strong> Currently pursuing a Computer Science B.S. and interested in entering the Cybersecurity 💻 field.</li>
+            <li><strong>Background with Web Development:</strong> I'm just starting out in web development and eager to expand my skills.</li>
+            <li><strong>Primary Computer Platform:</strong> Windows 11</li>
+            <li><strong>Courses I'm Taking This Semester:</strong>
+                <ul>
+                    <li>ITIS 3135 - Web App Design and Development</li>
+                    <li>ITSC 3155 - Software Engineering</li>
+                </ul>
+            </li>
+            <li><strong>Interesting Fact:</strong> I've recently gotten into watching Formula 1. 🏎️</li>
+        </ul>
+    </main>
 
-        <footer>
-            <nav>
-                <a href="../index.html">Main Portfolio Home</a> |
-                <a href="https://github.com/GitRich-del" target="_blank">GitHub Profile</a> |
-                <a href="https://gitrich-del.github.io/" target="_blank">GitHub Pages</a>
-            </nav>
-            <p>Page built by <a href="index.html">Siebenlist Solutions</a> ©2026</p>
-        </footer>
-        
-    </div>
+    <footer>
+        <nav>
+            <a href="../index.html">Main Portfolio Home</a> |
+            <a href="https://github.com/GitRich-del" target="_blank">GitHub Profile</a> |
+            <a href="https://gitrich-del.github.io/" target="_blank">GitHub Pages</a>
+        </nav>
+        <p>Page built by <a href="index.html">Siebenlist Solutions</a> ©2026</p>
+    </footer>
+</div>
 </body>
 </html>
