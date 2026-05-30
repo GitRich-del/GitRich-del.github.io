@@ -123,11 +123,12 @@
 
         ul ul {
             padding-left: 25px;
-            list-style: circle;
+            list-style: none; /* Fixed warning: uniform custom marker layout stack */
         }
 
         ul ul li::before {
-            content: "";
+            content: "◦"; /* Uses a clean open circle bullet cleanly via CSS injected pseudo elements */
+            color: #e67e22;
         }
     </style>
 
