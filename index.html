@@ -89,10 +89,12 @@
             gap: 15px;
         }
 
+        /* Fixed: Applied explicit structural styling grid properties to balance sizes evenly */
         .validation-badges img {
             border: none;
-            height: 31px;
-            width: auto; /* Changed to auto to preserve the aspect ratio of your badge */
+            height: 32px;
+            width: 88px;
+            object-fit: contain;
             transition: transform 0.2s ease;
         }
 
@@ -131,10 +133,10 @@
   
             <div class="validation-badges">
                 <a href="#" id="validation_link_html">
-                    <img src="html_validation.png" alt="Valid HTML5" height="31">
+                    <img src="html_validation.png" alt="Valid HTML5">
                 </a>
                 <a href="#" id="validation_link_css">
-                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" height="31" width="88">
+                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
                 </a>
             </div>
         </footer>
