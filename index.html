@@ -1,155 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Siebenlist Jr | ITIS3135 | Home</title>
-    <style>
-        /* --- Base Page Setup --- */
-        body {
-            /* Updated to Courier font stack */
-            font-family: 'Courier New', Courier, monospace;
-            background: linear-gradient(180deg, #ff7e5f 0%, #feb47b 50%, #ffde6a 100%);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: #222222;
-            margin: 0;
-            padding: 0;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Siebenlist Enterprises | Web Design & Development Consulting</title>
+	<!-- Color scheme from Coolors: https://coolars.co/palette/[update-with-your-url] -->
+	<style>
+		:root {
+			--primary-dark: #1a3a52;
+			--primary-blue: #2c5aa0;
+			--accent-gold: #d4af37;
+			--light-cream: #f5f1e8;
+			--text-dark: #2c2c2c;
+			--text-light: #5a5a5a;
+			--border-light: #e0ddd5;
+		}
 
-        #page-wrapper {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.88);
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-        header, footer {
-            text-align: center;
-            border-bottom: 2px solid #d35400;
-            padding: 20px 0;
-        }
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: var(--light-cream);
+			color: var(--text-dark);
+			line-height: 1.6;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
 
-        footer {
-            border-bottom: none;
-            border-top: 2px solid #d35400;
-            margin-top: 50px;
-            font-size: 0.95em;
-        }
+		header {
+			background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+			color: var(--light-cream);
+			padding: 3rem 2rem;
+			text-align: center;
+			border-bottom: 4px solid var(--accent-gold);
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+		}
 
-        h1 {
-            font-size: 2.6em;
-            letter-spacing: -1px;
-            color: #d35400;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-            margin-bottom: 5px;
-        }
+		header h1 {
+			font-size: 2.5rem;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+			margin-bottom: 0.5rem;
+		}
 
-        h2 {
-            font-size: 1.9em;
-            color: #e67e22;
-            border-bottom: 1px dashed #e67e22;
-            padding-bottom: 5px;
-            display: inline-block;
-        }
+		.header-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1.5rem;
+			flex-wrap: wrap;
+		}
 
-        nav {
-            margin: 15px 0;
-            text-align: center;
-        }
+		.logo {
+			width: 80px;
+			height: 80px;
+			background-color: var(--accent-gold);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2rem;
+			font-weight: 700;
+			color: var(--primary-dark);
+			flex-shrink: 0;
+		}
 
-        nav a {
-            margin: 0 12px;
-            text-decoration: none;
-            color: #d35400;
-            font-weight: bold;
-            transition: color 0.2s ease-in-out;
-        }
+		.header-text h1 {
+			margin-bottom: 0.25rem;
+		}
 
-        nav a:hover {
-            color: #a04000;
-            text-decoration: underline;
-        }
+		.tagline {
+			font-size: 1.1rem;
+			font-weight: 300;
+			color: var(--accent-gold);
+			margin-top: 0.5rem;
+		}
 
-        main {
-            max-width: 800px;
-            margin: 30px auto;
-            line-height: 1.7;
-            font-size: 1.15em;
-        }
+		main {
+			flex: 1;
+			max-width: 900px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 3rem 2rem;
+		}
 
-        .validation-badges {
-            margin-top: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-        }
+		main h2 {
+			font-size: 2rem;
+			color: var(--primary-dark);
+			margin-bottom: 1.5rem;
+			border-bottom: 3px solid var(--accent-gold);
+			padding-bottom: 0.75rem;
+		}
 
-        .validation-badges img {
-            border: none;
-            height: 31px;
-            width: auto; /* Changed to auto to preserve the aspect ratio of your badge */
-            transition: transform 0.2s ease;
-        }
+		.intro-paragraph {
+			font-size: 1.05rem;
+			color: var(--text-dark);
+			margin-bottom: 2rem;
+			line-height: 1.8;
+		}
 
-        .validation-badges img:hover {
-            transform: scale(1.05);
-        }
-    </style>
-    
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+		.services-list {
+			background-color: white;
+			border-left: 5px solid var(--accent-gold);
+			padding: 2rem;
+			margin-bottom: 2rem;
+			border-radius: 4px;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+		}
+
+		.services-list h3 {
+			color: var(--primary-dark);
+			margin-bottom: 1rem;
+			font-size: 1.3rem;
+		}
+
+		.services-list ul {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		.services-list li {
+			padding: 0.6rem 0;
+			padding-left: 2rem;
+			position: relative;
+			color: var(--text-dark);
+			font-size: 1rem;
+		}
+
+		.services-list li::before {
+			content: "✦";
+			position: absolute;
+			left: 0;
+			color: var(--accent-gold);
+			font-size: 1.2rem;
+		}
+
+		.contact-block {
+			background-color: var(--primary-dark);
+			color: var(--light-cream);
+			padding: 2.5rem;
+			border-radius: 4px;
+			margin: 2rem 0;
+			text-align: center;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+		}
+
+		.contact-block h3 {
+			color: var(--accent-gold);
+			font-size: 1.3rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.contact-info {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1.5rem;
+			text-align: left;
+			font-style: normal;
+		}
+
+		.contact-item {
+			background-color: rgba(255, 255, 255, 0.05);
+			padding: 1rem;
+			border-radius: 4px;
+			border-left: 3px solid var(--accent-gold);
+		}
+
+		.contact-item label {
+			display: block;
+			font-weight: 600;
+			color: var(--accent-gold);
+			margin-bottom: 0.3rem;
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.contact-item span {
+			display: block;
+			color: var(--light-cream);
+			font-size: 1rem;
+		}
+
+		.closing-paragraph {
+			font-size: 1.05rem;
+			color: var(--text-dark);
+			margin-top: 2rem;
+			line-height: 1.8;
+			background-color: white;
+			padding: 2rem;
+			border-radius: 4px;
+			border-top: 3px solid var(--accent-gold);
+		}
+
+		footer {
+			background-color: var(--primary-dark);
+			color: var(--accent-gold);
+			padding: 2rem;
+			text-align: center;
+			margin-top: auto;
+			border-top: 4px solid var(--accent-gold);
+		}
+
+		footer p {
+			font-size: 0.95rem;
+			margin: 0.5rem 0;
+		}
+
+		.footer-tagline {
+			font-style: italic;
+			color: var(--light-cream);
+			margin-top: 0.75rem;
+			font-size: 0.9rem;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			header h1 {
+				font-size: 1.8rem;
+			}
+
+			.header-content {
+				gap: 1rem;
+				flex-direction: column;
+			}
+
+			.logo {
+				width: 70px;
+				height: 70px;
+				font-size: 1.8rem;
+			}
+
+			main {
+				padding: 2rem 1rem;
+			}
+
+			main h2 {
+				font-size: 1.5rem;
+			}
+
+			.contact-info {
+				grid-template-columns: 1fr;
+			}
+
+			.services-list {
+				padding: 1.5rem;
+			}
+		}
+
+		@media (max-width: 480px) {
+			header {
+				padding: 2rem 1rem;
+			}
+
+			header h1 {
+				font-size: 1.5rem;
+			}
+
+			.tagline {
+				font-size: 0.95rem;
+			}
+
+			main h2 {
+				font-size: 1.3rem;
+			}
+
+			.services-list li {
+				font-size: 0.95rem;
+			}
+
+			.contact-block {
+				padding: 1.5rem;
+			}
+		}
+	</style>
 </head>
 <body>
-    <div id="page-wrapper">
-        
-        <header>
-            <h1>Richard Siebenlist Jr's ITIS3135</h1>
-            <nav>
-                <a href="index.html">Home</a> |
-                <a href="introduction.html">Introduction</a> |
-                <a href="contract.html">Contract</a>
-            </nav>
-        </header>
+	<header>
+		<div class="header-content">
+			<div class="logo">SE</div>
+			<div class="header-text">
+				<h1>Siebenlist Enterprises</h1>
+				<p class="tagline">Web Design & Development Consulting</p>
+			</div>
+		</div>
+	</header>
 
-        <main>
-            <h2>Welcome to my Course Website</h2>
-            <p>This space hosts all of my projects, assignments, and exercises for ITIS3135: Front-End Web Application Development during this semester.</p>
-            <p>Please use the navigation links above to view my Introduction page and my signed Course Contract.</p>
-        </main>
+	<main>
+		<h2>Siebenlist Enterprises Services</h2>
+		
+		<p class="intro-paragraph">
+			At Siebenlist Enterprises, we partner with businesses and organizations to create compelling digital experiences that drive growth and engagement. With a focus on modern design principles, cutting-edge technology, and accessibility standards, we deliver solutions that are as beautiful as they are functional.
+		</p>
 
-        <footer>
-            <nav>
-                <a href="https://www.freecodecamp.org/fcc-f299799b-d483-492c-bae6-8e579c33f8ea" target="_blank">FreeCodeCamp</a> |
-                <a href="https://www.linkedin.com/in/richardsiebenlistjr" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/GitRich-del/GitRich-del.github.io" target="_blank">GitHub</a>
-            </nav>
-            <p>Page built by <a href="index.html">Siebenlist Solutions</a> ©2026</p>
-  
-            <div class="validation-badges">
-                <a href="#" id="validation_link_html">
-                    <img src="html_validation.png" alt="Valid HTML5" height="31">
-                </a>
-                <a href="#" id="validation_link_css">
-                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" height="31" width="88">
-                </a>
-            </div>
-        </footer>
-        
-    </div>
+		<section class="services-list">
+			<h3>What We Offer</h3>
+			<ul>
+				<li>Custom Website Design & Development</li>
+				<li>Mobile-First Responsive Layouts</li>
+				<li>WCAG Accessibility Compliance & Audits</li>
+				<li>Performance Optimization & Page Speed Enhancement</li>
+				<li>SEO-Friendly Architecture & Best Practices</li>
+				<li>User Experience (UX) Consulting & Testing</li>
+				<li>Web Application Development</li>
+				<li>Ongoing Maintenance & Technical Support</li>
+			</ul>
+		</section>
 
-    <script>
-        // These scripts dynamically swap the "#" href for the live W3C validator link using your page's current URL
-        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/nu/?doc=" + encodeURIComponent(window.location.href));
-        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + encodeURIComponent(window.location.href));
-    </script>
+		<section class="contact-block">
+			<h3>Let's Work Together</h3>
+			<div class="contact-info">
+				<div class="contact-item">
+					<label>Email</label>
+					<span>hello@siebenlistenterprises.com</span>
+				</div>
+				<div class="contact-item">
+					<label>Phone</label>
+					<span>(704) 555-0147</span>
+				</div>
+				<div class="contact-item">
+					<label>Address</label>
+					<span>1823 Innovation Drive<br>Charlotte, NC 28202</span>
+				</div>
+			</div>
+		</section>
+
+		<p class="closing-paragraph">
+			We believe that great web design is more than aesthetics—it's about solving problems, telling stories, and creating meaningful connections between brands and their audiences. Whether you're launching a startup, redesigning an existing platform, or seeking strategic consultation, our team brings expertise, creativity, and dedication to every project. Let's build something remarkable together.
+		</p>
+	</main>
+
+	<footer>
+		<p>© 2026 Siebenlist Enterprises. All rights reserved.</p>
+		<p class="footer-tagline">"Elevating Your Digital Presence"</p>
+	</footer>
 </body>
 </html>
-
-
-
-
-       
