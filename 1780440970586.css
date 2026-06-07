@@ -82,13 +82,6 @@ body {
         padding-bottom: 8px;
     }
 
-    .grid-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 25px;
-        margin: 25px 0;
-    }
-
     /* Blue Cyberpunk Neon Border for Cards */
     .card {
         position: relative;
