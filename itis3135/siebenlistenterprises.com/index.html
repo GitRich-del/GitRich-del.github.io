@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Siebenlist Enterprises | Web Design & Development Consulting</title>
+	<!-- Color scheme from Coolors: https://coolars.co/palette/[update-with-your-url] -->
+	<style>
+		:root {
+			--primary-dark: #102840;
+			--primary-indigo: #1f4f80;
+			--primary-blue: #1f4f80;
+			--accent-sky: #6bc8d2;
+			--accent-gold: #e0b243;
+			--light-cream: #f3f2ee;
+			--card-white: #ffffff;
+			--text-dark: #1f2933;
+			--text-light: #5f6d7a;
+			--border-light: #d8e2ec;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: var(--light-cream);
+			color: var(--text-dark);
+			line-height: 1.6;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+		header {
+			position: relative;
+			overflow: hidden;
+			background: radial-gradient(circle at top left, rgba(107, 200, 210, 0.22), transparent 30%), linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-indigo) 100%);
+			color: var(--light-cream);
+			padding: 2rem 2rem;
+			text-align: center;
+			border-bottom: 4px solid var(--accent-gold);
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+		}
+
+		.site-title {
+			font-size: 2.2rem;
+			font-weight: 700;
+			letter-spacing: 0.5px;
+			margin-bottom: 0;
+		}
+
+		/* Custom SE Logo */
+		.se-logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 70px;
+			height: 70px;
+			margin: 0 auto 1rem;
+			border-radius: 12px;
+			background: linear-gradient(135deg, var(--accent-gold), var(--accent-sky));
+			color: var(--primary-dark);
+			font-size: 2rem;
+			font-weight: 800;
+			letter-spacing: -2px;
+			box-shadow: 0 6px 18px rgba(224, 178, 67, 0.3);
+		}
+
+		.validation-links {
+			margin-top: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1.5rem;
+			flex-wrap: wrap;
+		}
+
+		.validation-links a {
+			transition: opacity 0.2s ease;
+		}
+
+		.validation-links a:hover {
+			opacity: 0.8;
+		}
+
+		.validation-links img {
+			border: none;
+			height: 31px;
+			width: auto;
+		}
+
+		.intro-paragraph {
+			font-size: 1.05rem;
+			color: var(--text-dark);
+			margin-bottom: 2rem;
+			line-height: 1.8;
+		}
+
+		.services-list {
+			background-color: white;
+			border-left: 5px solid var(--accent-gold);
+			padding: 2rem;
+			margin-bottom: 2rem;
+			border-radius: 4px;
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+		}
+
+		.services-heading {
+			color: var(--primary-dark);
+			margin-bottom: 1rem;
+			font-size: 1.3rem;
+		}
+
+		.services-list ul {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		.services-list li {
+			padding: 0.6rem 0;
+			padding-left: 2rem;
+			position: relative;
+			color: var(--text-dark);
+			font-size: 1rem;
+		}
+
+		.services-list li::before {
+			content: "✦";
+			position: absolute;
+			left: 0;
+			color: var(--accent-gold);
+			font-size: 1.2rem;
+		}
+
+		.contact-block {
+			background-color: var(--primary-dark);
+			color: var(--light-cream);
+			padding: 2.5rem;
+			border-radius: 4px;
+			margin: 2rem 0;
+			text-align: center;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+		}
+
+		.contact-heading {
+			color: var(--accent-gold);
+			font-size: 1.3rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.contact-info {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1.5rem;
+			text-align: left;
+		}
+
+		.contact-item {
+			background-color: rgba(255, 255, 255, 0.05);
+			padding: 1rem;
+			border-radius: 4px;
+			border-left: 3px solid var(--accent-gold);
+		}
+
+		.contact-item label {
+			display: block;
+			font-weight: 600;
+			color: var(--accent-gold);
+			margin-bottom: 0.3rem;
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.contact-item span {
+			display: block;
+			color: var(--light-cream);
+			font-size: 1rem;
+		}
+
+		.closing-paragraph {
+			font-size: 1.05rem;
+			color: var(--text-dark);
+			margin-top: 2rem;
+			line-height: 1.8;
+			background-color: white;
+			padding: 2rem;
+			border-radius: 4px;
+			border-top: 3px solid var(--accent-gold);
+		}
+
+		footer {
+			background-color: var(--primary-dark);
+			color: var(--accent-gold);
+			padding: 2rem;
+			text-align: center;
+			margin-top: auto;
+			border-top: 4px solid var(--accent-gold);
+		}
+
+		footer p {
+			font-size: 0.95rem;
+			margin: 0.5rem 0;
+		}
+
+		.footer-tagline {
+			font-style: italic;
+			color: var(--light-cream);
+			margin-top: 0.75rem;
+			font-size: 0.9rem;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 768px) {
+			.site-title {
+				font-size: 1.6rem;
+			}
+
+			.se-logo {
+				width: 60px;
+				height: 60px;
+				font-size: 1.8rem;
+			}
+
+			main {
+				padding: 2rem 1rem;
+			}
+
+			.contact-info {
+				grid-template-columns: 1fr;
+			}
+
+			.services-list {
+				padding: 1.5rem;
+			}
+		}
+
+		@media (max-width: 480px) {
+			header {
+				padding: 1.5rem 1rem;
+			}
+
+			.site-title {
+				font-size: 1.3rem;
+			}
+
+			.se-logo {
+				width: 55px;
+				height: 55px;
+				font-size: 1.5rem;
+			}
+
+			.tagline {
+				font-size: 0.95rem;
+			}
+
+			.services-list li {
+				font-size: 0.95rem;
+			}
+
+			.contact-block {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<div class="se-logo">SE</div>
+		<h1 class="site-title">Siebenlist Enterprises</h1>
+	</header>
+
+	<main>
+		<p class="intro-paragraph">
+			At Siebenlist Enterprises, we partner with businesses and organizations to create compelling digital experiences that drive growth and engagement. With a focus on modern design principles, cutting-edge technology, and accessibility standards, we deliver solutions that are as beautiful as they are functional.
+		</p>
+
+		<section class="services-list">
+			<h3 class="services-heading">What We Offer</h3>
+			<ul>
+				<li>Custom Website Design & Development</li>
+				<li>Mobile-First Responsive Layouts</li>
+				<li>WCAG Accessibility Compliance & Audits</li>
+				<li>Performance Optimization & Page Speed Enhancement</li>
+				<li>SEO-Friendly Architecture & Best Practices</li>
+				<li>User Experience (UX) Consulting & Testing</li>
+				<li>Web Application Development</li>
+				<li>Ongoing Maintenance & Technical Support</li>
+			</ul>
+		</section>
+
+		<section class="contact-block">
+			<h3 class="contact-heading">Let's Work Together</h3>
+			<div class="contact-info">
+				<div class="contact-item">
+					<label>Email</label>
+					<span>hello@siebenlistenterprises.com</span>
+				</div>
+				<div class="contact-item">
+					<label>Phone</label>
+					<span>(704) 555-0147</span>
+				</div>
+				<div class="contact-item">
+					<label>Address</label>
+					<span>1823 Innovation Drive<br>Charlotte, NC 28202</span>
+				</div>
+			</div>
+		</section>
+
+		<p class="closing-paragraph">
+			We believe that great web design is more than aesthetics—it's about solving problems, telling stories, and creating meaningful connections between brands and their audiences. Whether you're launching a startup, redesigning an existing platform, or seeking strategic consultation, our team brings expertise, creativity, and dedication to every project. Let's build something remarkable together.
+		</p>
+	</main>
+
+	<footer>
+		<p>© 2026 Siebenlist Enterprises. All rights reserved.</p>
+		<p class="footer-tagline">"Elevating Your Digital Presence"</p>
+		<div class="validation-links">
+			<a href="#" id="validation_link_html">
+				<img src="../html_validation.png" alt="Valid HTML5" onerror="this.src='https://validator.w3.org/images/w3c.png'">
+			</a>
+			<a href="#" id="validation_link_css">
+				<img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+			</a>
+		</div>
+	</footer>
+
+	<script>
+		document.getElementById("validation_link_html").setAttribute("href",
+			"https://validator.w3.org/nu/?doc=" + encodeURIComponent(window.location.href));
+
+		document.getElementById("validation_link_css").setAttribute("href",
+			"https://jigsaw.w3.org/css-validator/validator?uri=" + encodeURIComponent(window.location.href));
+	</script>
+</body>
+</html>
