@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Siebenlist Jr. | ITIS3135 | Introduction Form</title>
+
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <div data-include="components/header.html"></div>
+
+        <main id="intro-form-main">
+            <h2>Introduction Form</h2>
+            <h3>Please submit the form below.</h3>
+
+            <form id="intro-form" action="#" novalidate>
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="firstName" value="Richard" placeholder="First name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="middle-name">Middle Name or Initial (optional)</label>
+                    <input type="text" id="middle-name" name="middleName" value="" placeholder="Middle name or initial">
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred-name">Nickname or Preferred Name (optional)</label>
+                    <input type="text" id="preferred-name" name="preferredName" value="" placeholder="Nickname or preferred name">
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="lastName" value="Siebenlist Jr." placeholder="Last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="acknowledgment">Acknowledgment Statement</label>
+                    <textarea id="acknowledgment" name="acknowledgment" placeholder="I understand this is constructed by me and all details are true." required>I understand this is constructed by me and all details are true.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ack-date">Acknowledgment Date</label>
+                    <input type="text" id="ack-date" name="ackDate" value="2026-06-30" placeholder="YYYY-MM-DD" pattern="^\d{4}-\d{2}-\d{2}$" title="Use format YYYY-MM-DD" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascot-adjective">Mascot Adjective</label>
+                    <input type="text" id="mascot-adjective" name="mascotAdjective" value="Resilient" placeholder="Mascot adjective" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mascot-animal">Mascot Animal</label>
+                    <input type="text" id="mascot-animal" name="mascotAnimal" value="Shark" placeholder="Mascot animal" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="divider">Divider</label>
+                    <input type="text" id="divider" name="divider" value="|" placeholder="~, |, *, etc." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="picture-default">Default Picture URL (used when no upload is chosen)</label>
+                    <input type="text" id="picture-default" name="pictureDefault" value="images/me.png" placeholder="images/me.png" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="picture-upload">Picture Upload (optional override)</label>
+                    <input type="file" id="picture-upload" name="pictureUpload" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="picture-caption">Picture Caption</label>
+                    <input type="text" id="picture-caption" name="pictureCaption" value="Biltmore Estate Asheville, NC 📍" placeholder="Picture caption" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="personal-statement">Personal Statement</label>
+                    <textarea id="personal-statement" name="personalStatement" placeholder="One short statement about yourself." required>I'm Richard (Rich), also called Junior or JunBugz by family. I moved to NC to pursue Cybersecurity, and in my free time I enjoy music, travel, and watching F1 for the engineering and performance.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="personal-background">Personal Background</label>
+                    <textarea id="personal-background" name="personalBackground" placeholder="Personal background" required>Born X Raised in Milwaukee, Wi 🧀, passionate about technology and problem-solving</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="professional-background">Professional Background</label>
+                    <textarea id="professional-background" name="professionalBackground" placeholder="Professional background" required>Working on gaining experience throughout my academics and personal projects</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="academic-background">Academic Background</label>
+                    <textarea id="academic-background" name="academicBackground" placeholder="Academic background" required>Currently pursuing a Computer Science B.S. and interested in entering the Cybersecurity 💻 Field</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="webdev-background">Background with Web Development</label>
+                    <textarea id="webdev-background" name="webdevBackground" placeholder="Web development background" required>I'm just getting started in web development but I'm eager to expand my skills</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="primary-platform">Primary Computer Platform</label>
+                    <input type="text" id="primary-platform" name="primaryPlatform" value="Windows 11" placeholder="Primary computer platform" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="interesting-fact">Interesting Fact</label>
+                    <textarea id="interesting-fact" name="interestingFact" placeholder="Interesting fact" required>I've recently gotten into watching Formula 1 🏎️💨</textarea>
+                </div>
+
+                <fieldset id="courses-fieldset">
+                    <legend>Courses (Department, Number, Name, Reason)</legend>
+                    <div id="courses-container">
+                        <div class="course-row">
+                            <input type="text" name="courseDepartment[]" value="ITIS" placeholder="Department" required>
+                            <input type="text" name="courseNumber[]" value="3135" placeholder="Number" required>
+                            <input type="text" name="courseName[]" value="Web App Design and Development" placeholder="Course name" required>
+                            <input type="text" name="courseReason[]" value="Build practical front-end skills" placeholder="Reason" required>
+                            <button type="button" class="remove-course" aria-label="Remove this course">Remove</button>
+                        </div>
+                        <div class="course-row">
+                            <input type="text" name="courseDepartment[]" value="ITSC" placeholder="Department" required>
+                            <input type="text" name="courseNumber[]" value="3155" placeholder="Number" required>
+                            <input type="text" name="courseName[]" value="Software Engineering" placeholder="Course name" required>
+                            <input type="text" name="courseReason[]" value="Learn team-based software development" placeholder="Reason" required>
+                            <button type="button" class="remove-course" aria-label="Remove this course">Remove</button>
+                        </div>
+                    </div>
+                    <button type="button" id="add-course">Add Course</button>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="quote">Quote</label>
+                    <textarea id="quote" name="quote" placeholder="Favorite quote" required>Stay resilient, keep building.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="quote-author">Quote Author</label>
+                    <input type="text" id="quote-author" name="quoteAuthor" value="Richard Siebenlist Jr." placeholder="Quote author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="funny-thing">Funny Thing (optional)</label>
+                    <input type="text" id="funny-thing" name="funnyThing" value="" placeholder="Funny thing">
+                </div>
+
+                <div class="form-group">
+                    <label for="share">Something I would like to share (optional)</label>
+                    <textarea id="share" name="share" placeholder="Something to share">Consistency beats intensity in learning.</textarea>
+                </div>
+
+                <fieldset>
+                    <legend>Links (5 required)</legend>
+                    <div class="form-group">
+                        <label for="link-1-label">Link 1 Label</label>
+                        <input type="text" id="link-1-label" name="link1Label" value="Main Portfolio Home" placeholder="Link text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="link-1-url">Link 1 URL</label>
+                        <input type="text" id="link-1-url" name="link1Url" value="../index.html" placeholder="https://example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="link-2-label">Link 2 Label</label>
+                        <input type="text" id="link-2-label" name="link2Label" value="GitHub Profile" placeholder="Link text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="link-2-url">Link 2 URL</label>
+                        <input type="text" id="link-2-url" name="link2Url" value="https://github.com/GitRich-del" placeholder="https://example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="link-3-label">Link 3 Label</label>
+                        <input type="text" id="link-3-label" name="link3Label" value="LinkedIn" placeholder="Link text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="link-3-url">Link 3 URL</label>
+                        <input type="text" id="link-3-url" name="link3Url" value="https://www.linkedin.com/in/richardsiebenlistjr" placeholder="https://example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="link-4-label">Link 4 Label</label>
+                        <input type="text" id="link-4-label" name="link4Label" value="GitHub Pages" placeholder="Link text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="link-4-url">Link 4 URL</label>
+                        <input type="text" id="link-4-url" name="link4Url" value="https://gitrich-del.github.io/" placeholder="https://example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="link-5-label">Link 5 Label</label>
+                        <input type="text" id="link-5-label" name="link5Label" value="Siebenlist Enterprises" placeholder="Link text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="link-5-url">Link 5 URL</label>
+                        <input type="text" id="link-5-url" name="link5Url" value="https://webpages.charlotte.edu/rsiebenl/itis3135/siebenlistenterprises.com/" placeholder="https://example.com" required>
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="button" id="clear-form">Clear</button>
+                </div>
+            </form>
+
+            <div id="intro-result" hidden></div>
+        </main>
+
+        <div data-include="components/footer.html"></div>
+    </div>
+
+    <script src="scripts/include.min.js"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
