@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Prompt terminal</title>
+<desc id="desc">A futuristic AI prompt terminal with glowing command text.</desc>
+<defs><linearGradient id="bg" y1="0" y2="1"><stop offset="0" stop-color="#02010f"/><stop offset="1" stop-color="#001f2a"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="900" height="560" fill="url(#bg)"/>
+<rect x="105" y="105" width="690" height="350" rx="25" fill="#07172b" stroke="#42fff4" stroke-width="6" filter="url(#glow)"/>
+<circle cx="145" cy="145" r="12" fill="#ff45d4"/><circle cx="185" cy="145" r="12" fill="#ffd05f"/><circle cx="225" cy="145" r="12" fill="#42fff4"/>
+<g font-family="monospace" font-size="30" fill="#eaffff"><text x="145" y="225">&gt; make it out of this world</text><text x="145" y="285">&gt; neon clouds + cyber lab</text><text x="145" y="345">&gt; single-page hobby site</text><text x="145" y="405">&gt; validate clean</text></g>
+<path d="M140 475 H760" stroke="#ff45d4" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+<g fill="#fff"><circle cx="95" cy="80" r="4"/><circle cx="805" cy="72" r="4"/><circle cx="812" cy="488" r="5"/><circle cx="60" cy="390" r="3"/></g>
+</svg>
