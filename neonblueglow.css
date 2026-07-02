@@ -1,0 +1,312 @@
+:root {
+    --bg-deep: #09111d;
+    --bg-panel: #121f31;
+    --bg-card: #1a2a3f;
+    --line-muted: #2a3d58;
+    --text-main: #d7e9ff;
+    --text-soft: #9db8d6;
+    --accent-bright: #1fa9ff;
+    --accent-mid: #0b7fe0;
+    --accent-soft: #7dc8ff;
+}
+
+body {
+    font-family: 'OCR A Extended', 'Noto Sans Symbols 2', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 25px;
+    background: linear-gradient(180deg, #0f1a2a 0%, #121f31 100%);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border: none;
+}
+
+/* Outer neon frame for page container */
+body::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 15px;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-mid), var(--accent-bright));
+    background-size: 300% 300%;
+    animation: cyberGlow 6s ease infinite;
+    -webkit-mask: linear-gradient(var(--accent-soft) 0 0) content-box, linear-gradient(var(--accent-soft) 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(var(--accent-soft) 0 0) content-box, linear-gradient(var(--accent-soft) 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    filter: drop-shadow(0 0 22px var(--accent-mid));
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--line-muted);
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.hero-mark {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 4px auto 12px auto;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 8px rgba(31, 169, 255, 0.95)) drop-shadow(0 0 18px rgba(31, 169, 255, 0.5));
+}
+
+h1 {
+    font-size: 2.4em;
+    color: var(--accent-soft);
+    margin: 0;
+    letter-spacing: -0.5px;
+    animation: nameGlow 3s ease-in-out forwards;
+}
+
+@keyframes nameGlow {
+    0% {
+        text-shadow: 0 0 0px var(--accent-soft);
+    }
+    50% {
+        text-shadow: 0 0 18px var(--accent-soft);
+    }
+    100% {
+        text-shadow: 0 0 8px var(--accent-mid);
+    }
+}
+
+header p {
+    font-size: 1.2em;
+    color: var(--text-soft);
+    margin: 5px 0 0 0;
+    border: none;
+    padding: 0;
+    font-weight: normal;
+}
+
+main {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Normalized gap between all blocks */
+    width: 100%;
+}
+
+ul {
+    list-style-type: "◈ ";
+    padding-left: 25px;
+    margin: 10px 0 20px 0;
+}
+
+h2 {
+    font-size: 2.4em;
+    color: var(--accent-soft);
+    padding-bottom: 8px;
+    text-align: center;
+    margin: 10px 0 0 0;
+    text-transform: none;
+    letter-spacing: 0.04em;
+    word-spacing: normal;
+    line-height: 1.1;
+}
+
+main > p {
+    text-align: center;
+    margin: -15px 0 0 0;
+}
+
+/* Blue Cyberpunk Neon Border for Cards */
+main > section {
+    position: relative;
+    background: var(--bg-card);
+    padding: 25px;
+    margin: 0;
+    border-radius: 8px;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1;
+}
+
+/* Outer neon glow for cards using mask trick */
+main > section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent-mid), var(--accent-bright));
+    background-size: 300% 300%;
+    animation: cyberGlow 5s ease infinite;
+    -webkit-mask: linear-gradient(var(--accent-soft) 0 0) content-box, linear-gradient(var(--accent-soft) 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(var(--accent-soft) 0 0) content-box, linear-gradient(var(--accent-soft) 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    filter: drop-shadow(0 0 14px var(--accent-mid));
+}
+
+/* Inner pulse */
+main > section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    background: rgba(31, 169, 255, 0.14);
+    animation: innerPulse 3s ease-in-out infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+main > section:hover {
+    transform: translateY(-4px);
+}
+
+main > section:active {
+    box-shadow: 0 0 18px 4px var(--accent-soft);
+    transform: scale(0.98);
+}
+
+h3 {
+    margin-top: 0;
+    color: var(--accent-soft);
+}
+
+main > section ul {
+    padding-left: 40px;
+    margin: 10px 0;
+    color: var(--text-soft);
+}
+
+main > section li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: var(--accent-bright);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main > section:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top left, #1b2f49, #0f1a2a);
+    border: 1px dashed #36567a;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 0;
+}
+
+main > section:last-of-type > span {
+    font-size: 3.5em;
+    margin-right: 20px;
+    animation: floatCloud 4s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes floatCloud {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+h4 {
+    margin: 0 0 5px 0;
+    color: var(--accent-soft);
+    font-size: 1.2em;
+}
+
+main > section:last-of-type p {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--text-soft);
+}
+
+footer {
+    text-align: center;
+    border-top: 2px solid var(--line-muted);
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--text-soft);
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.validation-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    align-items: center;
+}
+
+.validation-links a {
+    display: inline-block;
+    height: 31px;
+    width: 88px;
+    overflow: hidden;
+}
+
+.validation-links img {
+    display: block;
+    height: 31px;
+    width: 88px;
+    object-fit: fill;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.validation-links img:hover {
+    transform: scale(1.05);
+}
+
+/* Shared animations */
+@keyframes cyberGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes innerPulse {
+    0% {
+        opacity: 0.05;
+    }
+    50% {
+        opacity: 0.20;
+    }
+    100% {
+        opacity: 0.05;
+    }
+}
