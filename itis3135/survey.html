@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Siebenlist Jr. | ITIS3135 | Resilient Shark Survey</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body class="home-page">
+    <div id="page-wrapper">
+        <div data-include="components/header.html"></div>
+
+        <main>
+            <h2 class="page-title">Survey 🙵 Feedback</h2>
+            <p>Join the Resilient Shark squad! Help us refine our gear and tell us about yourself.</p>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name">Shark Name (Full Name):</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Squad Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Introduction Section -->
+                <div class="form-group">
+                    <label for="background">Personal Background:</label>
+                    <textarea id="background" name="background" placeholder="Tell us about your background..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="academic">Academic Background:</label>
+                    <input type="text" id="academic" name="academic" placeholder="Your major/degree">
+                </div>
+                <div class="form-group">
+                    <label for="interests">Professional Interests:</label>
+                    <input type="text" id="interests" name="interests" placeholder="e.g. Cybersecurity, Web Dev">
+                </div>
+
+                <div class="form-group">
+                    <label for="dropdown">Favorite Resilient Gear:</label>
+                    <select id="dropdown" name="gear">
+                        <option disabled selected value>Select an item</option>
+                        <option value="beanie">Shark Beanie (Gray)</option>
+                        <option value="chain">Silver Shark Chain</option>
+                        <option value="pendant">RS Logo Pendant</option>
+                        <option value="wristband">Resilient Wristband</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>Will you stay resilient and join the squad?</p>
+                    <label><input name="user-recommend" value="definitely" type="radio" checked> Definitely</label>
+                    <label><input name="user-recommend" value="maybe" type="radio"> Maybe</label>
+                    <label><input name="user-recommend" value="retreat" type="radio"> Sharks never retreat!</label>
+                </div>
+                <div class="form-group">
+                    <p>What fuels your resilience? (Check all that apply)</p>
+                    <label><input name="fuel" value="technology" type="checkbox"> New Technology</label>
+                    <label><input name="fuel" value="style" type="checkbox"> Fresh Gear</label>
+                    <label><input name="fuel" value="ocean" type="checkbox"> The Deep Ocean</label>
+                    <label><input name="fuel" value="code" type="checkbox"> Clean Code</label>
+                </div>
+                <div class="form-group">
+                    <p>How can we improve the squad experience?</p>
+                    <textarea id="comments" name="comment" placeholder="Enter your feedback here..."></textarea>
+                </div>
+                <button type="submit" id="submit">Join the Squad</button>
+            </form>
+        </main>
+
+        <div data-include="components/footer.html"></div>
+    </div>
+    <script src="scripts/include.min.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
