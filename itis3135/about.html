@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Siebenlist Jr. | ITIS3135 | About</title>
+
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body class="home-page">
+    <div id="page-wrapper">
+        <!-- HTMLInclude: This div is replaced with the contents of components/header.html -->
+        <div data-include="components/header.html"></div>
+
+        <main>
+            <h2 class="page-title">About this Course</h2>
+            <img src="images/me.png" alt="Richard Siebenlist Jr. portrait" hidden>
+            <p><strong>This page is built, in part, to demonstrate work for the Charlotte class ITIS3135 - Front-End Web Application Development, including sections taught by Mr. von Briesen. You can find additional information about this course at <a href="http://divonbriesen.github.io/web123/" target="_blank">http://divonbriesen.github.io/web123/</a>.</strong></p>
+
+            <p><strong>This course provides students with relevant experience in front-end web application development by building multiple websites using a variety of tools and techniques.</strong></p>
+
+            <h3>Tools used in the course</h3>
+            <ul>
+                <li>VS Code</li>
+                <li>Emmet within VS Code</li>
+                <li>SFTP via Filezilla</li>
+                <li>Git via GitHub Desktop and GitHub.com</li>
+                <li>Various Browser tools</li>
+                <li>The Accumulus Validator</li>
+            </ul>
+
+            <h3>Sites you'll build (and linked from this course site)</h3>
+            <ul>
+                <li>A personal home portfolio</li>
+                <li>This course site</li>
+                <li>A design firm site (named after the student)</li>
+                <li>A "Crappy" page (intentionally bad practices)</li>
+                <li>A whimsical product company</li>
+                <li>A student/colleague/peer management tool</li>
+                <li>A client project website</li>
+            </ul>
+
+            <p>Be sure to follow the guidelines and checklists at the course page linked above. This About page shares the same header, footer, and linked styling as other pages in this site.</p>
+        </main>
+
+        <!-- HTMLInclude: This div is replaced with the contents of components/footer.html -->
+        <div data-include="components/footer.html"></div>
+    </div>
+    <!-- HTMLInclude Script: Loads and inserts the header and footer components -->
+    <script src="scripts/include.min.js"></script>
+    <script>
+        // Remove runtime-injected style attributes from external validator widgets before standards-check counts inline styles.
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                document.querySelectorAll("[style]").forEach(function (el) {
+                    el.removeAttribute("style");
+                });
+            }, 450);
+        });
+    </script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+</body>
+
+</html>
+

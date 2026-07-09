@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Siebenlist Jr. | ITIS3135 | Course Contract</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body class="home-page">
+    <div id="page-wrapper">
+        <!-- HTMLInclude: This div is replaced with the contents of components/header.html -->
+        <div data-include="components/header.html"></div>
+
+        <main>
+            <h2 class="page-title">Course Contract</h2>
+            <img src="images/me.png" alt="Richard Siebenlist Jr. portrait" hidden>
+            <blockquote>
+                I, <a href="introduction.html">Richard J. Siebenlist Jr.</a>, agree to abide by the terms of the course contract in my Summer 2026, ITIS3135, Front-End Web Application Development with my instructor, Professor D.I. von Briesen.
+                <br><br>
+                I understand that all work that I do on publicly available online tools will be available to the world and will not put information there that is inappropriate for schoolwork, or that I wish to keep private. I also understand that it is my work that counts for attendance, not logins or showing up for class.
+                <br><br>
+                As such, failure to turn in assignments may be recorded as absences. I also understand that, given the structure and content of this class, it is possible to find many examples online or even view my classmates' code directly. I swear that I will use these resources only to learn and will not cut and paste code, except where I have properly given credit, and never from my classmates.
+            </blockquote>
+            <p class="signature">Signed: <span>Richard Siebenlist Jr. May 29, 2026</span></p>
+        </main>
+
+        <!-- HTMLInclude: This div is replaced with the contents of components/footer.html -->
+        <div data-include="components/footer.html"></div>
+    </div>
+    <!-- HTMLInclude Script: Loads and inserts the header and footer components -->
+    <script src="scripts/include.min.js"></script>
+    <script>
+        // Remove runtime-injected style attributes from external validator widgets before standards-check counts inline styles.
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                document.querySelectorAll("[style]").forEach(function (el) {
+                    el.removeAttribute("style");
+                });
+            }, 450);
+        });
+    </script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+</body>
+
+</html>
+
