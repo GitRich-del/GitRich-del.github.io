@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
-<title id="title">Method core</title>
-<desc id="desc">A glowing circular process core for building projects.</desc>
-<defs><linearGradient id="bg" y1="0" y2="1"><stop offset="0" stop-color="#070015"/><stop offset="1" stop-color="#001f2a"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-<rect width="900" height="560" fill="url(#bg)"/>
-<g transform="translate(450 280)" filter="url(#glow)"><circle r="180" fill="#08172d" stroke="#37f7ff" stroke-width="6"/><circle r="96" fill="#12002d" stroke="#ff48d0" stroke-width="6"/><path d="M0 -214 L34 -146 L-34 -146 Z" fill="#ffd05f"/><path d="M214 0 L146 34 L146 -34 Z" fill="#37f7ff"/><path d="M0 214 L34 146 L-34 146 Z" fill="#ff48d0"/><path d="M-214 0 L-146 34 L-146 -34 Z" fill="#89ff66"/></g>
-<g font-family="monospace" font-size="28" fill="#ffffff" text-anchor="middle"><text x="450" y="288">BUILD CORE</text><text x="450" y="70">PLAN</text><text x="740" y="290">PROTOTYPE</text><text x="450" y="512">TEST</text><text x="150" y="290">POLISH</text></g>
-<g stroke="#ffffff" stroke-width="3" opacity=".55"><path d="M450 82 V170"/><path d="M652 280 H565"/><path d="M450 478 V392"/><path d="M248 280 H335"/></g>
-</svg>
